@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     background-image: url('/images/egg/bg.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 
     img {
       height: auto;
