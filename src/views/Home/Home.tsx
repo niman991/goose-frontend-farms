@@ -7,7 +7,6 @@ import FarmStakingCard from './components/FarmStakingCard'
 import LotteryCard from './components/LotteryCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
-import Timer from './components/Timer'
 import TwitterCard from './components/TwitterCard'
 
 const Hero = styled.div`
@@ -55,10 +54,6 @@ const Home: React.FC = () => {
       <Hero>
         <img src="/images/Title.png" alt="cake logo" width={357} height={107} />
       </Hero>
-       <Heading as="h1" size="xl" mb="24px" color="secondary" >
-                Time until farming starts
-              </Heading>
-            <Timer />
       <div>
         <Cards>
           <FarmStakingCard />
