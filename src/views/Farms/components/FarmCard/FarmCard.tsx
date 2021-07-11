@@ -182,7 +182,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
               :
               `https://bscscan.com/token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
           }
-          totalValueFormated={totalValueFormated}*10
+          totalValueFormated={totalValueFormated}
           lpLabel={lpLabel}
           quoteTokenAdresses={quoteTokenAdresses}
           quoteTokenSymbol={quoteTokenSymbol}
