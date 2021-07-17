@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: ${({ theme }) => theme.colors.background};
-    background-image: url('/images/egg/bg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
