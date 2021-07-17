@@ -46,6 +46,21 @@ const config: MenuEntry[] = [
   //   href: '/nft',
   // },
   {
+    label: 'GitHub',
+    icon: 'LogoIcon',
+    href: 'https://github.com/',
+  },
+  {
+    label: 'Referrals',
+    icon: 'CommunityIcon',
+    href: '/',
+  },
+  {
+    label: 'Audit coming soon',
+    icon: 'AuditIcon',
+    href: '/',
+  },
+    {
     label: 'More',
     icon: 'MoreIcon',
     items: [
@@ -53,30 +68,7 @@ const config: MenuEntry[] = [
         label: 'Github',
         href: 'https://github.com/goosedefi/',
       },
-      {
-        label: 'Docs',
-        href: 'https://goosedefi.gitbook.io/goose-finance/',
-      },
-      {
-        label: 'Blog',
-        href: 'https://goosefinance.medium.com/',
-      },
     ],
-  },
-    {
-    label: 'GitHub',
-    icon: 'GooseIcon',
-    href: 'https://github.com/',
-  },
-  {
-    label: 'Partnerships/IFO',
-    icon: 'GooseIcon',
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSe7ycrw8Dq4C5Vjc9WNlRtTxEhFDB1Ny6jlAByZ2Y6qBo7SKg/viewform?usp=sf_link',
-  },
-  {
-    label: 'Audit coming soon',
-    icon: 'AuditIcon',
-    href: '/',
   },
 ]
 
