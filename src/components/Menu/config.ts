@@ -47,12 +47,12 @@ const config: MenuEntry[] = [
   // },
   {
     label: 'GitHub',
-    icon: 'LogoIcon',
+    icon: 'AuditIcon',
     href: 'https://github.com/',
   },
   {
     label: 'Referrals',
-    icon: 'CommunityIcon',
+    icon: 'AuditIcon',
     href: '/',
   },
   {
