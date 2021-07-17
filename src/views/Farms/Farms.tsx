@@ -100,8 +100,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         }
       </Heading>
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        {TranslateString(10000, 'Deposit Fee will be used to buyback BIRDY')}
-        {TranslateString(10000, 'FARMING STARTS AT BLOCK 11111111')}
+        {TranslateString(10000, 'FARMING STARTS AT BLOCK 00000000')}
       </Heading>
       <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
       <div>
