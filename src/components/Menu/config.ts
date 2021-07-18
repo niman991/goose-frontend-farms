@@ -3,12 +3,12 @@ import { MenuEntry } from '@pancakeswap-libs/uikit'
 const config: MenuEntry[] = [
   {
     label: 'Home',
-    icon: 'HomeIcon',
+    icon: 'MoreIcon',
     href: '/',
   },
   {
     label: 'Trade',
-    icon: 'TradeIcon',
+    icon: 'MoreIcon',
     items: [
       {
         label: 'Exchange',
@@ -22,17 +22,17 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Farms',
-    icon: 'FarmIcon',
+    icon: 'MoreIcon',
     href: '/farms',
   },
   {
     label: 'Pools',
-    icon: 'PoolIcon',
+    icon: 'MoreIcon',
     href: '/nests',
   },
   {
     label: 'Farming Countdown',
-    icon: 'CogIcon',
+    icon: 'MoreIcon',
     href: '/farms',
   },
   // {
@@ -52,17 +52,17 @@ const config: MenuEntry[] = [
   // },
   {
     label: 'GitHub',
-    icon: 'InfoIcon',
+    icon: 'MoreIcon',
     href: 'https://github.com/',
   },
   {
     label: 'Referrals',
-    icon: 'CommunityIcon',
+    icon: 'MoreIcon',
     href: '/',
   },
   {
     label: 'Audit coming soon',
-    icon: 'AuditIcon',
+    icon: 'MoreIcon',
     href: '/',
   },
     {
