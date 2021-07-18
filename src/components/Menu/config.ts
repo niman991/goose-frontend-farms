@@ -30,6 +30,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/nests',
   },
+  {
+    label: 'Farming Countdown',
+    icon: 'CogIcon',
+    href: '/farms',
+  },
   // {
   //   label: 'Pools',
   //   icon: 'PoolIcon',
@@ -47,12 +52,12 @@ const config: MenuEntry[] = [
   // },
   {
     label: 'GitHub',
-    icon: 'AuditIcon',
+    icon: 'InfoIcon',
     href: 'https://github.com/',
   },
   {
     label: 'Referrals',
-    icon: 'AuditIcon',
+    icon: 'CommunityIcon',
     href: '/',
   },
   {
