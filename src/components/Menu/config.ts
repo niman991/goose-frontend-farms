@@ -31,11 +31,6 @@ const config: MenuEntry[] = [
     href: '/nests',
   },
   {
-    label: 'Farming Countdown',
-    icon: 'InfoIcon',
-    href: '/',
-  },
-  {
     label: 'Prices',
     icon: 'InfoIcon',
     href: '/',
