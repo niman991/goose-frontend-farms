@@ -32,7 +32,7 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Farming Countdown',
-    icon: 'ClockIcon',
+    icon: 'InfoIcon',
     href: '/',
   },
   {
