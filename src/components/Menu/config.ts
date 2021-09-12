@@ -33,26 +33,21 @@ const config: MenuEntry[] = [
   {
     label: 'Farming Countdown',
     icon: 'ClockIcon',
-    href: '/farms',
+    href: '/',
   },
-  // {
-  //   label: 'Pools',
-  //   icon: 'PoolIcon',
-  //   href: '/pools',
-  // },
-  // {
-  //   label: 'Lottery',
-  //   icon: 'TicketIcon',
-  //   href: '/lottery',
-  // },
-  // {
-  //   label: 'NFT',
-  //   icon: 'NftIcon',
-  //   href: '/nft',
-  // },
+  {
+    label: 'Prices',
+    icon: 'InfoIcon',
+    href: '/',
+  },
+  {
+    label: 'Analytics',
+    icon: 'InfoIcon',
+    href: '/',
+  },
   {
     label: 'Referrals (Coming soon)',
-    icon: 'InfoIcon',
+    icon: 'GroupsIcon',
     href: '/',
   },
   {
