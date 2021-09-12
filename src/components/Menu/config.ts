@@ -32,7 +32,7 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Farming Countdown',
-    icon: 'MoreIcon',
+    icon: 'ClockIcon',
     href: '/farms',
   },
   // {
@@ -52,12 +52,12 @@ const config: MenuEntry[] = [
   // },
   {
     label: 'Referrals (Coming soon)',
-    icon: 'MoreIcon',
+    icon: 'InfoIcon',
     href: '/',
   },
   {
     label: 'Bridge',
-    icon: 'MoreIcon',
+    icon: 'TradeIcon',
     href: '/',
   },
     {
