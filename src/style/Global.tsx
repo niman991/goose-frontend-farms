@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: auto;
 
     img {
       height: auto;
