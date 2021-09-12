@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.goosedefi.com/',
+        href: 'https://swap.moonswap.in/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.goosedefi.com/#/pool',
+        href: 'https://swap.moonswap.in/#/pool',
       },
     ],
   },
@@ -33,12 +33,12 @@ const config: MenuEntry[] = [
   {
     label: 'Prices',
     icon: 'InfoIcon',
-    href: '/',
+    href: 'https://swap.moonswap.in/#/stats',
   },
   {
     label: 'Analytics',
     icon: 'InfoIcon',
-    href: '/',
+    href: 'https://info.moonswap.in/',
   },
   {
     label: 'Referrals (Coming soon)',
@@ -48,7 +48,7 @@ const config: MenuEntry[] = [
   {
     label: 'Bridge',
     icon: 'TradeIcon',
-    href: '/',
+    href: 'https://anyswap.exchange/dashboard#/',
   },
     {
     label: 'More',
