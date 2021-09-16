@@ -3,7 +3,7 @@
     "inputs": [
       {
         "internalType": "contract RivaToken",
-        "name": „_riva“,
+        "name": "_riva“,
         "type": "address"
       },
       {
