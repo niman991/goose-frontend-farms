@@ -2,8 +2,8 @@
 	{
 		"inputs": [
 			{
-				"internalType": "contract EggToken",
-				"name": "_egg",
+				"internalType": "contract RivaToken",
+				"name": "_riva",
 				"type": "address"
 			},
 			{
@@ -18,7 +18,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "_eggPerBlock",
+				"name": "_rivaPerBlock",
 				"type": "uint256"
 			},
 			{
@@ -210,32 +210,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "egg",
-		"outputs": [
-			{
-				"internalType": "contract EggToken",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "eggPerBlock",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -318,7 +292,7 @@
 				"type": "address"
 			}
 		],
-		"name": "pendingEgg",
+		"name": "pendingRiva",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -356,7 +330,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "accEggPerShare",
+				"name": "accRivaPerShare",
 				"type": "uint256"
 			},
 			{
@@ -386,6 +360,32 @@
 		"name": "renounceOwnership",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "riva",
+		"outputs": [
+			{
+				"internalType": "contract RivaToken",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "rivaPerBlock",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -472,7 +472,7 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_eggPerBlock",
+				"name": "_rivaPerBlock",
 				"type": "uint256"
 			}
 		],
