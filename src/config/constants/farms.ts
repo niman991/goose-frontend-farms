@@ -9,7 +9,7 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
-      137: '0x6d1fcfefe523f35149bae02b01f1f6ddd334ae1b',
+      137: '0x6D1fcfefE523f35149BAe02B01f1f6DdD334ae1B',
     },
     tokenSymbol: 'RIVA',
     tokenAddresses: {
