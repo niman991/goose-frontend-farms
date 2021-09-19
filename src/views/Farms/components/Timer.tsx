@@ -6,3 +6,5 @@ ReactDOM.render(
   <Countdown date={Date.now() + 259200000} />,
   document.getElementById("root")
 );
+
+export default Timer
