@@ -55,6 +55,10 @@ const Home: React.FC = () => {
       <Hero>
         <img src="/images/Title.png" alt="cake logo" width={357} height={107} />
       </Hero>
+         <Heading as="h1" size="xl" mb="24px" color="secondary" >
+           Time until farming ends
+         </Heading>
+         <Timer />
       <div>
         <Cards>
           <FarmStakingCard />
