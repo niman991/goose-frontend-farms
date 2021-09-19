@@ -16,6 +16,7 @@ import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
+import Timer from './components/Timer'
 
 export interface FarmsProps{
   tokenMode?: boolean
@@ -100,8 +101,9 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         }
       </Heading>
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        {TranslateString(10000, 'FARMING STARTS AT BLOCK 00000000')}
+        {TranslateString(10000, 'Farming starts 23rd September')}
       </Heading>
+        <Timer />      
       <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
       <div>
         <Divider />
