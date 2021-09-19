@@ -7,4 +7,6 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
+}
+
 export default Timer
