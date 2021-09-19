@@ -23,7 +23,7 @@ ReactDOM.render(
 
   return (
   <TimerBox>
-    <Timer>
+    <Timer />
   </TimerBox>
   )
   
