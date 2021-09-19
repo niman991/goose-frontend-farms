@@ -54,7 +54,6 @@ const Home: React.FC = () => {
       <Hero>
         <img src="/images/Title.png" alt="cake logo" width={357} height={107} />
       </Hero>
-      <Timer />
       <div>
         <Cards>
           <FarmStakingCard />
