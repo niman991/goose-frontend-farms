@@ -8,7 +8,6 @@ import LotteryCard from './components/LotteryCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
-import Timer from './components/Timer'
 
 const Hero = styled.div`
   align-items: center;
@@ -55,10 +54,6 @@ const Home: React.FC = () => {
       <Hero>
         <img src="/images/Title.png" alt="cake logo" width={357} height={107} />
       </Hero>
-        <Heading as="h3" size="m" mb="24px" color="secondary" >
-           Farming beginns 23rd September
-        </Heading>
-        <Timer />
       <div>
         <Cards>
           <FarmStakingCard />
