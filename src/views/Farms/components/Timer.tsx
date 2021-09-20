@@ -9,9 +9,8 @@ const TimerBox = styled.div`
   justify-content: space-around;
   font-family: sans-serif;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   margin-bottom: 40px;
-  background-color: yellow;
   `
 
 
