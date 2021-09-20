@@ -104,7 +104,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         }
       </Heading>
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        {TranslateString(10000, 'Farming starts 23rd September')}<br/>
+        {TranslateString(10000, 'Farming starts 23rd September')}<br />
       <Timer />
       </Heading> 
       <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
