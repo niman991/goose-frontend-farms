@@ -21,7 +21,7 @@ const Timer = () => {
   <TimerBox>
        ReactDOM.render(
       <Countdown date={Date.now() + 1000000} />,
-      document.getElementById("root")
+      document.getElementById('root')
     );
   </TimerBox>
   )
