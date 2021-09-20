@@ -10,8 +10,8 @@ const TimerBox = styled.div`
   font-family: sans-serif;
   text-align: center;
   padding-top: 0px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-style: none;
   `
 
