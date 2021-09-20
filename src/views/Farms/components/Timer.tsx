@@ -19,7 +19,7 @@ const Timer = () => {
   return (
     <div>
       <TimerBox>
-        <Countdown date={'2021-09-25T00:00:00'} />
+        <Countdown date='2021-09-25T00:00:00' />
       </TimerBox>
     </div>
 );
