@@ -14,10 +14,6 @@ const TimerBox = styled.div`
   `
 
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<Timer />, rootElement);
-
-
 
 function Timer() {
   return (
