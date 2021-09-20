@@ -16,7 +16,16 @@ import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
-import Timer from './components/Timer'
+
+import ReactDOM from "react-dom";
+import Countdown from "react-countdown";
+
+
+// Random component
+const Completionist = () => <span>You are good to go!</span>;
+
+
+
 
 export interface FarmsProps{
   tokenMode?: boolean
@@ -104,7 +113,12 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         {TranslateString(10000, 'Farming starts 23rd September')}
       </Heading> 
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        <Timer />      
+       ReactDOM.render(
+         <Countdown date={Date.now() + 5000000}>
+           <Completionist />
+         </Countdown>,
+          document.getElementById("root")
+            );    
               </Heading> 
       <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
       <div>
