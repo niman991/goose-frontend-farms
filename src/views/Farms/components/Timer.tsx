@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Countdown from "react-countdown";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Countdown from 'react-countdown';
 import styled from 'styled-components';
 
 
@@ -11,11 +11,12 @@ const TimerBox = styled.div`
   text-align: center;
   padding-top: 20px;
   margin-bottom: 40px;
+  background-color: yellow;
   `
 
 
+const Timer = () => {
 
-function Timer() {
   return (
     <div>
       <TimerBox>
