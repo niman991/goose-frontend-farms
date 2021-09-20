@@ -16,14 +16,13 @@ const TimerBox = styled.div`
 
 
 const Timer = () => {
-ReactDOM.render(
-  <Countdown date={Date.now() + 1000000} />,
-  document.getElementById("root")
-);
 
   return (
   <TimerBox>
-    <Timer />
+       ReactDOM.render(
+      <Countdown date={Date.now() + 1000000} />,
+      document.getElementById("root")
+    );
   </TimerBox>
   )
   
@@ -32,4 +31,4 @@ ReactDOM.render(
 
 
 
-export default Timer;
+export default Timer
