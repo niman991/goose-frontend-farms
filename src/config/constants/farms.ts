@@ -35,8 +35,8 @@ const farms: FarmConfig[] = [
       56: '0xf952fc3ca7325cc27d15885d37117676d25bfda6',
       137: '0xdd31D406AD1a88c000E1Ad7ee7d277157C9D7d13',
     },
-    quoteTokenSymbol: QuoteToken.MOVR,
-    quoteTokenAdresses: contracts.movr,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.bnb,
   },
   {
     pid: 2,
