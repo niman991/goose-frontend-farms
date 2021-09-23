@@ -32,4 +32,9 @@ export default {
     97: '',
     137: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174'
   },
+  movr: {
+    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    97: '',
+    137: '0xB497c3E9D27Ba6b1fea9F1b941d8C79E66cfC9d6'
+  },  
 }
