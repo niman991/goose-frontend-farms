@@ -102,9 +102,9 @@ export const useTotalValue = (): BigNumber => {
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
         val = (bnbPrice.times(farm.lpTotalInQuoteToken));
       }else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+        val = (cakePrice.times(farm.lpTotalInQuoteToken));
       }else{
-         val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+        val = (farm.lpTotalInQuoteToken);
       }
       value = value.plus(val);
     }
