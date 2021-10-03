@@ -47,14 +47,14 @@ const farms: FarmConfig[] = [
       56: '',
       1285: '0x74888A02891586EBecCc7B04A0F7a9b5098Daf05',
     },
-    tokenSymbol: 'MOVR',
+    tokenSymbol: 'USDC',
     tokenAddresses: {
       97: '',
       56: '',
-      1285: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+      1285: '0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
   },
 
     {
