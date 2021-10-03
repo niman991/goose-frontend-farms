@@ -101,10 +101,10 @@ export const useTotalValue = (): BigNumber => {
       let val;
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
         val = (bnbPrice.times(farm.lpTotalInQuoteToken));
-      }else if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
-        val = (cakePrice.times(farm.lpTotalInQuoteToken));
+      }else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
       }else{
-        val = (farm.lpTotalInQuoteToken);
+         val = (bnbPrice.times(farm.lpTotalInQuoteToken));
       }
       value = value.plus(val);
     }
