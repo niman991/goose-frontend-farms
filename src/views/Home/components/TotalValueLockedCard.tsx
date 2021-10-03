@@ -18,6 +18,7 @@ const TotalValueLockedCard = () => {
   const totalValue = useTotalValue();
   // const tvl = totalValue.toFixed(2);
 
+
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
