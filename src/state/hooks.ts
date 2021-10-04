@@ -94,16 +94,15 @@ export const useTotalValue = (): BigNumber => {
   const farms = useFarms();
   const bnbPrice = usePriceBnbBusd();
   const cakePrice = usePriceCakeBusd();
-  BigNumber.config({ DECIMAL_PLACES: 18 })
-  let value = new BigNumber(0.000000000000000000);
+  let value = new BigNumber(0);
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
     if (farm.lpTotalInQuoteToken) {
       let val;
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+        val = (farm.lpTotalInQuoteToken);
       }else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = (cakePrice.times(farm.lpTotalInQuoteToken));
+        val = (farm.lpTotalInQuoteToken);
       }else{
         val = (farm.lpTotalInQuoteToken);
       }
