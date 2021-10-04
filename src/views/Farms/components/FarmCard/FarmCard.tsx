@@ -106,14 +106,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     if (farm.quoteTokenSymbol === QuoteToken.BNB) {
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
-    if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
+    if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
       return cakePrice.times(farm.lpTotalInQuoteToken)
     }
     return farm.lpTotalInQuoteToken
   }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
-    ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+    ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 9 })}`
     : '-'
 
   const lpLabel = farm.lpSymbol
