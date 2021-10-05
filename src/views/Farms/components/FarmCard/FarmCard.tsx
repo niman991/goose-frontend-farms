@@ -104,9 +104,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
     if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-      return cakePrice.times(farm.lpTotalInQuoteToken)
+      return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
-    return farm.lpTotalInQuoteToken
+    return bnbPrice.times(farm.lpTotalInQuoteToken)
   }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
