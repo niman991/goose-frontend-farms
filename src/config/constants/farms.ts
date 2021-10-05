@@ -173,8 +173,6 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   
-  
-  
       {
     pid: 9,
     risk: 5,
@@ -194,9 +192,6 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-
-  
-  
   
 ]
 
