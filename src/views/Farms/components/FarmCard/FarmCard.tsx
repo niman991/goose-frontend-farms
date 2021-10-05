@@ -87,8 +87,7 @@ interface FarmCardProps {
   ethereum?: provider
   account?: string
 }
-
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed,  cakePrice, bnbPrice, ethereum, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account }) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -100,14 +99,17 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed,  cakePrice, bnbPrice
   const farmImage = farm.isTokenOnly ? farm.tokenSymbol.toLowerCase() : `${farm.tokenSymbol.toLowerCase()}-${farm.quoteTokenSymbol.toLowerCase()}`
 
   const totalValue: BigNumber = useMemo(() => {
+    if (!farm.lpTotalInQuoteToken) {
+      return null
+    }
     if (farm.quoteTokenSymbol === QuoteToken.BNB) {
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
     if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-      return bnbPrice.times(farm.lpTotalInQuoteToken)
+      return cakePrice.times(farm.lpTotalInQuoteToken)
     }
-    return bnbPrice.times(farm.lpTotalInQuoteToken)
-  }, [bnbPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+    return farm.lpTotalInQuoteToken
+  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 2 })}`
