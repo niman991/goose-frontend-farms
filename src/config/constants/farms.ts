@@ -173,25 +173,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   
-      {
-    pid: 9,
-    risk: 5,
-    isTokenOnly: true,
-    lpSymbol: 'RIVA',
-    lpAddresses: {
-      97: '',
-      56: '',
-      1285: '0xf8495E432DA6cA47d4eD658093fFF836022E298A',
-    },
-    tokenSymbol: 'RIVA',
-    tokenAddresses: {
-      97: '',
-      56: '',
-      1285: '0x938d8a0E546a968B52dE13EC64126C28B2eF71e4',
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  },
+
   
 ]
 
