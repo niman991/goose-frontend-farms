@@ -58,15 +58,12 @@ const fetchFarms = async () => {
       ] = await multicall(erc20, calls)
 
     
-
+      
       let tokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
-      if (farmConfig.isTokenOnly) {
-      //     console.log('here2',
-      //   tokenDecimals,farmConfig
-      // )
-        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(6));
+      if(farmConfig.isTokenOnly){
+        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
         if(farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD){
           tokenPriceVsQuote = new BigNumber(1);
         }else{
@@ -79,7 +76,7 @@ const fetchFarms = async () => {
 
         // Total value in staking in quote token value
         lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(6))
+          .div(new BigNumber(10).pow(tokenDecimals))
           .times(new BigNumber(2))
           .times(lpTokenRatio)
 
