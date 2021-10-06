@@ -9,13 +9,13 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '',
-      1285: '0xf8495E432DA6cA47d4eD658093fFF836022E298A',
+      1285: '0xf17227b8684bCaeA9FcC9c062Ef81D1EDC07374C',
     },
     tokenSymbol: 'RIVA',
     tokenAddresses: {
       97: '',
       56: '',
-      1285: '0x938d8a0E546a968B52dE13EC64126C28B2eF71e4',
+      1285: '0x0ECe64308f07f12dee501d2e31B0F834748767b1',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
