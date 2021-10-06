@@ -62,15 +62,6 @@ const fetchFarms = async () => {
       let tokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
-      if(farmConfig.isTokenOnly){
-        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
-        if(farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD){
-          tokenPriceVsQuote = new BigNumber(1);
-        }else{
-          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
-        }
-        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
-      }else{
         
         // Ratio in % of LP tokens that are staked in the MC, vs the total number in circulation
         const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
@@ -82,16 +73,11 @@ const fetchFarms = async () => {
         // Amount of quoteToken in the LP that are staked in the MC
         const quoteTokenAmountMc = quoteTokenAmountTotal.times(lpTokenRatio)
 
-        // Tot al staked in LP, in quote token value
+        // Total staked in LP, in quote token value
         const lpTotalInQuoteToken = quoteTokenAmountMc.times(new BigNumber(2))
   
         
 
-        // Total value in staking in quote token value
-       // lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-       //   .div(new BigNumber(10).pow(6))
-       //   .times(new BigNumber(2))
-       //   .times(lpTokenRatio)
 
         // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
         tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
