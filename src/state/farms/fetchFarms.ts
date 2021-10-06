@@ -60,7 +60,6 @@ const fetchFarms = async () => {
     
       
       let tokenAmount;
-      let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
         
         // Ratio in % of LP tokens that are staked in the MC, vs the total number in circulation
