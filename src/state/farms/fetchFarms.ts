@@ -76,7 +76,7 @@ const fetchFarms = async () => {
 
         // Total value in staking in quote token value
         lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(12))
+          .div(new BigNumber(10).pow(6))
           .times(new BigNumber(2))
           .times(lpTokenRatio)
 
