@@ -57,11 +57,16 @@ const fetchFarms = async () => {
         quoteTokenDecimals
       ] = await multicall(erc20, calls)
 
+    
+
       let tokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
-      if(farmConfig.isTokenOnly){
-        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
+      if (farmConfig.isTokenOnly) {
+      //     console.log('here2',
+      //   tokenDecimals,farmConfig
+      // )
+        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(6));
         if(farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD){
           tokenPriceVsQuote = new BigNumber(1);
         }else{
@@ -74,7 +79,7 @@ const fetchFarms = async () => {
 
         // Total value in staking in quote token value
         lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(18))
+          .div(new BigNumber(10).pow(6))
           .times(new BigNumber(2))
           .times(lpTokenRatio)
 
@@ -91,7 +96,7 @@ const fetchFarms = async () => {
         }
       }
 
-      const [info, totalAllocPoint, eggPerBlock] = await multicall(masterchefABI, [
+      const [info, totalAllocPoint, gajPerBlock] = await multicall(masterchefABI, [
         {
           address: getMasterChefAddress(),
           name: 'poolInfo',
@@ -103,7 +108,7 @@ const fetchFarms = async () => {
         },
         {
           address: getMasterChefAddress(),
-          name: 'eggPerBlock',
+          name: 'gajPerBlock',
         },
       ])
 
@@ -119,7 +124,7 @@ const fetchFarms = async () => {
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
-        eggPerBlock: new BigNumber(eggPerBlock).toNumber(),
+        gajPerBlock: new BigNumber(gajPerBlock).toNumber(),
       }
     }),
   )
