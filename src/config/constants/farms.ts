@@ -27,13 +27,13 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '',
-      1285: '0x244EA65c058DEc35662b31Bf3c58618b17a44C9c'
+      1285: '0x896C7Bfd94312E2025bF58100E3045636Bf3540c'
     },
     tokenSymbol: 'RIVA',
     tokenAddresses: {
       97: '',
       56: '',
-      1285: '0x938d8a0E546a968B52dE13EC64126C28B2eF71e4',
+      1285: '0x0ECe64308f07f12dee501d2e31B0F834748767b1',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
