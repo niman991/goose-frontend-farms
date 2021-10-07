@@ -60,7 +60,7 @@ const fetchFarms = async () => {
     
 
       let tokenAmount;
- 
+      let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
       if (farmConfig.isTokenOnly) {
       //     console.log('here2',
@@ -82,7 +82,7 @@ const fetchFarms = async () => {
 
   // Raw amount of token in the LP, including those not staked
   const tokenAmountTotal = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(tokenDecimals))
-  const quoteTokenAmountTotal = new BigNumber(quoteTokenBalanceLP).div(BIG_TEN.pow(quoteTokenDecimals))
+  const quoteTokenAmountTotal = new BigNumber(quoteTokenBlanceLP).div(BIG_TEN.pow(quoteTokenDecimals))
 
   // Amount of quoteToken in the LP that are staked in the MC
   const quoteTokenAmountMc = quoteTokenAmountTotal.times(lpTokenRatio)
