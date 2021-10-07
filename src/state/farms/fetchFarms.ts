@@ -62,18 +62,7 @@ const fetchFarms = async () => {
       let tokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
-      if (farmConfig.isTokenOnly) {
-      //     console.log('here2',
-      //   tokenDecimals,farmConfig
-      // )
-        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(6));
-        if(farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD){
-          tokenPriceVsQuote = new BigNumber(1);
-        }else{
-          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
-        }
-        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
-      }else{
+ 
         
         
         
@@ -116,7 +105,7 @@ const fetchFarms = async () => {
 //        }else{
 //          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
 //        }
-      }
+      
 
       const [info, totalAllocPoint, rivaPerBlock] = await multicall(masterchefABI, [
         {
