@@ -74,26 +74,48 @@ const fetchFarms = async () => {
         }
         lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
       }else{
+        
+        
+        
+          // Ratio in % of LP tokens that are staked in the MC, vs the total number in circulation
+  const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
+
+  // Raw amount of token in the LP, including those not staked
+  const tokenAmountTotal = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(tokenDecimals))
+  const quoteTokenAmountTotal = new BigNumber(quoteTokenBalanceLP).div(BIG_TEN.pow(quoteTokenDecimals))
+
+  // Amount of quoteToken in the LP that are staked in the MC
+  const quoteTokenAmountMc = quoteTokenAmountTotal.times(lpTokenRatio)
+
+  // Total staked in LP, in quote token value
+  const lpTotalInQuoteToken = quoteTokenAmountMc.times(new BigNumber(2))
+        
+        
+        
+        
+        
+        
+        
         // Ratio in % a LP tokens that are in staking, vs the total number in circulation
-        const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
+  //      const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
 
         // Total value in staking in quote token value
-        lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(6))
-          .times(new BigNumber(2))
-          .times(lpTokenRatio)
+//        lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
+//          .div(new BigNumber(10).pow(6))
+//          .times(new BigNumber(2))
+//          .times(lpTokenRatio)
 
-        // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
-        tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
-        const quoteTokenAmount = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(quoteTokenDecimals))
-          .times(lpTokenRatio)
+//        // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
+//        tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
+//        const quoteTokenAmount = new BigNumber(quoteTokenBlanceLP)
+//          .div(new BigNumber(10).pow(quoteTokenDecimals))
+//          .times(lpTokenRatio)
 
-        if(tokenAmount.comparedTo(0) > 0){
-          tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
-        }else{
-          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
-        }
+//        if(tokenAmount.comparedTo(0) > 0){
+//          tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
+//        }else{
+//          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
+//        }
       }
 
       const [info, totalAllocPoint, rivaPerBlock] = await multicall(masterchefABI, [
