@@ -84,7 +84,7 @@ const fetchFarms = async () => {
         }else{
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
         }
-      }
+      
 
       const [info, totalAllocPoint, rivaPerBlock] = await multicall(masterchefABI, [
         {
