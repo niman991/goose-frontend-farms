@@ -78,9 +78,9 @@ const fetchFarms = async () => {
           .times(lpTokenRatio)
 
         if(tokenAmount.comparedTo(0) > 0){
-          tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
+          const tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
         }else{
-          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
+          const tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
         }
       
 
