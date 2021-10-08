@@ -59,30 +59,42 @@ const fetchFarms = async () => {
 
     
 
-
-
-      
-      // Ratio in % a LP tokens that are in staking, vs the total number in circulation
+      let tokenAmount;
+      let lpTotalInQuoteToken;
+      let tokenPriceVsQuote;
+      if (farmConfig.isTokenOnly) {
+      //     console.log('here2',
+      //   tokenDecimals,farmConfig
+      // )
+        tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(6));
+        if(farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD){
+          tokenPriceVsQuote = new BigNumber(1);
+        }else{
+          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
+        }
+        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
+      }else{
+        // Ratio in % a LP tokens that are in staking, vs the total number in circulation
         const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
 
         // Total value in staking in quote token value
-        const lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-         // .div(new BigNumber(10).pow(6))
+        lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
+          .div(new BigNumber(10).pow(6))
           .times(new BigNumber(2))
           .times(lpTokenRatio)
 
         // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
-        const tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
+        tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
         const quoteTokenAmount = new BigNumber(quoteTokenBlanceLP)
           .div(new BigNumber(10).pow(quoteTokenDecimals))
           .times(lpTokenRatio)
 
         if(tokenAmount.comparedTo(0) > 0){
-          const tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
+          tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
         }else{
-          const tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
+          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP));
         }
-      
+      }
 
       const [info, totalAllocPoint, rivaPerBlock] = await multicall(masterchefABI, [
         {
